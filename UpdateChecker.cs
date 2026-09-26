@@ -10,8 +10,8 @@ namespace PaperMasterWin;
 
 public static class UpdateChecker
 {
-    public const string CurrentVersion = "1.0.0";
-    public const int CurrentVersionCode = 100;
+    public const string CurrentVersion = "1.1.2";
+    public const int CurrentVersionCode = 112;
     public const string GitHubReleasesUrl = "https://github.com/whsunshine8/papermaster-release/releases";
     public const string UpdateJsonUrl = "https://raw.githubusercontent.com/whsunshine8/papermaster-release/main/update.json";
 

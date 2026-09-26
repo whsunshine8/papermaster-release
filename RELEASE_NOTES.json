@@ -1,15 +1,18 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.2",
+  "versionCode": 112,
   "releaseDate": "2026-09-26",
   "changelog": [
-    "首次发布 Windows 桌面版本",
-    "支持5步论文生成流程：选题→大纲→开题报告→正文→答辩PPT",
-    "对接 OpenAI 兼容 API（支持通义千问、智谱、Moonshot 等）",
-    "DOCX 文档导出",
-    "本地历史记录保存",
-    "配置管理（API地址、密钥、默认模型）",
-    "现代化 WPF UI 界面"
+    "与 Android 移动端核心机制保持对齐，初始基线控制在 v1.1.2，为桌面端预留迭代版本空间",
+    "学术五步流水线正文深度生成（突破 Token 截断，保质保量生成万字长文）",
+    "基本设定完善：论文层次/学科门类/目录级别/论文字数/结构模板",
+    "API 服务地址内置隐藏，Key 密文输入保护，新增可用模型在线一键刷新",
+    "内置官方客服微信与闲鱼官方发卡直营店入口",
+    "大纲、开题报告、正文、答辩自述稿、PPT大纲每个模块均支持独立无损导出标准 Word (.docx)",
+    "重构 Docx 导出引擎，彻底解决文件冲突闪退问题",
+    "新增本地工程历史记录管理，支持双击一键载入",
+    "集成 GitHub 在线版本升级检测与下载引导"
   ],
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/tag/v1.0.0-windows",
-  "systemRequirements": "Windows 10/11, .NET 8.0 Runtime"
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.2-windows/PaperMaster-Windows-v1.1.2.zip",
+  "systemRequirements": "Windows 10 / 11 64位 (独立单文件绿色运行，无需预装运行时)"
 }

@@ -27,7 +27,7 @@
                     <TextBlock Text="📄" FontSize="24" Margin="0,0,8,0" VerticalAlignment="Center"/>
                     <TextBlock Text="论文智作大师" FontSize="18" FontWeight="Bold" Foreground="#1E293B" VerticalAlignment="Center"/>
                     <Border Background="#EEF2FF" CornerRadius="4" Padding="6,2,6,2" Margin="8,0,0,0" VerticalAlignment="Center">
-                        <TextBlock Text="Windows v1.0.0" FontSize="11" FontWeight="SemiBold" Foreground="#4F46E5"/>
+                        <TextBlock Text="Windows v1.1.2" FontSize="11" FontWeight="SemiBold" Foreground="#4F46E5"/>
                     </Border>
                 </StackPanel>
 
