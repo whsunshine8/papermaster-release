@@ -17,9 +17,14 @@
 
 | 版本 | 文件类型 | 适用架构 | 下载方式 |
 | :--- | :--- | :--- | :--- |
-| **v1.1.5 (最新正式版)** | Android APK (`.apk`) | 兼容全部主流 Android 设备 (armeabi-v7a / arm64-v8a) | [⬇️ GitHub 极速下载直链](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.5/PaperMaster_v1.1.5.apk) |
+| **v1.1.6 (最新正式版)** | Android APK (`.apk`) | 兼容全部主流 Android 设备 (armeabi-v7a / arm64-v8a) | [⬇️ GitHub 极速下载直链](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.6/PaperMaster_v1.1.6.apk) |
 
 > 💡 **历史版本**：你可以随时访问 [Releases 官方发布页](https://github.com/whsunshine8/papermaster-release/releases) 查看所有历史版本与详细发布说明。
+
+### 🛒 API 额度与官方店铺
+
+- 🐟 **官方闲鱼 API 商店 (自动发卡/额度充值)**：[点击前往闲鱼选购](https://m.tb.cn/h.8E3c6Ov?tk=va4tTmOlu8K)
+- 💬 **人工客服微信**：`ai_dxlw`
 
 ### 💡 核心功能特性
 
@@ -38,18 +43,19 @@
 
 ### 🚀 快速上手使用
 
-1. **下载安装**：通过上方链接下载 `PaperMaster_v1.1.5.apk` 并安装到手机（若系统提示请允许“安装未知来源应用”）。
+1. **下载安装**：通过上方链接下载 `PaperMaster_v1.1.6.apk` 并安装到手机（若系统提示请允许“安装未知来源应用”）。
 2. **设定题目与需求**：打开应用，输入论文题目、字数预期（如 8000 ~ 15000 字）及研究要点。
-3. **确认/调整大纲**：点击「生成大纲」，系统将自动推理多级目录结构，可在大纲编辑区手动调整。
-4. **一键生成全文**：点击「开始生成」，系统将逐章有序推进，支持随时暂停或继续。
-5. **导出并分享**：生成完成后，点击「导出为 Word」，即可直接调用系统分享或在 WPS/Office 中打开。
+3. **获取 API 密钥**：在设置页点击「前往选购」直达闲鱼官方 API 商店获取密钥或添加客服微信。
+4. **确认/调整大纲**：点击「生成大纲」，系统将自动推理多级目录结构，可在大纲编辑区手动调整。
+5. **一键生成全文**：点击「开始生成」，系统将逐章有序推进，支持随时暂停或继续。
+6. **导出并分享**：生成完成后，点击「导出为 Word」，即可直接调用系统分享或在 WPS/Office 中打开。
 
 ### 📝 最近更新日志
 
-#### v1.1.5 (2026-09-26)
+#### v1.1.6 (2026-09-26)
+- **API 商店嵌入**：设置界面内置闲鱼官方 API 商店一键直达入口，支持自动发卡与额度获取。
 - **检测通道升级**：接入高可用 GitHub 极速更新检测接口，告别网络拦截与卡顿。
-- **签名兼容重构**：全量补齐 Android 系统级 v2/v3 签名校验，彻底解决部分设备提示“无效安装包”的问题。
-- **长文本保活优化**：增强生成进程后台 CPU 锁与内存保活能力，长篇大作生成更稳定。
+- **签名兼容重构**：全量补齐 Android 系统级 v2/v3 签名校验，彻底解决设备提示“无效安装包”的问题。
 
 ---
 
@@ -66,32 +72,23 @@
 
 | Version | File Type | Architecture | Download Link |
 | :--- | :--- | :--- | :--- |
-| **v1.1.5 (Latest)** | Android APK (`.apk`) | Universal Android (armeabi-v7a / arm64-v8a) | [⬇️ Direct Download (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.5/PaperMaster_v1.1.5.apk) |
+| **v1.1.6 (Latest)** | Android APK (`.apk`) | Universal Android (armeabi-v7a / arm64-v8a) | [⬇️ Direct Download (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.6/PaperMaster_v1.1.6.apk) |
 
 > 💡 **Release Archive**: Visit the [Releases Page](https://github.com/whsunshine8/papermaster-release/releases) for historical builds and release notes.
 
+### 🛒 Official Store & Support
+
+- 🐟 **Goofish API Key Store**: [Visit Official Store](https://m.tb.cn/h.8E3c6Ov?tk=va4tTmOlu8K)
+- 💬 **WeChat Support**: `ai_dxlw`
+
 ### 💡 Key Features
 
-- 🧠 **Intelligent Outline Reasoning**: Generates well-structured, multi-level academic outlines (Chapters, Sections, Subsections) based on research topics and requirements.
-- 📖 **Long-Form Multi-Chapter Generation**: Overcomes LLM single-request context and token output limits through seamless multi-stage chapter synthesis.
-- 🎯 **Precise Length Control**: Multi-layer constraint system with natural sentence boundary detection keeps output within 1.0x - 1.2x of the target word count.
-- 📑 **Standard Word (.docx) Export**: Exports formatted `.docx` files adhering to formal academic typography standards, ready for desktop editing.
-- 🔋 **Background Task Persistence**: Integrated WakeLock and foreground task scheduling ensures uninterrupted generation even when the screen is locked or apps are switched.
+- 🧠 **Intelligent Outline Reasoning**: Generates well-structured, multi-level academic outlines based on research topics and requirements.
+- 📖 **Long-Form Multi-Chapter Generation**: Overcomes LLM context limits through seamless multi-stage chapter synthesis.
+- 🎯 **Precise Length Control**: Keeps output within 1.0x - 1.2x of the target word count with natural sentence closing.
+- 📑 **Standard Word (.docx) Export**: Exports formatted `.docx` files adhering to formal academic typography standards.
+- 🔋 **Background Task Persistence**: WakeLock and foreground task scheduling ensures uninterrupted generation.
 - 🔄 **Automatic Update Check**: High-availability version checking on startup with one-click direct update downloading.
-
-### 📱 Requirements
-
-- **OS**: Android 8.0 (API Level 26) or higher.
-- **Permissions**: Storage/file management for exporting documents.
-- **Network**: Internet connectivity for LLM API streaming inference.
-
-### 🚀 Getting Started
-
-1. **Install**: Download `PaperMaster_v1.1.5.apk` from the link above and install on your Android device.
-2. **Setup**: Enter your paper title, target word count (e.g. 8,000–15,000 words), and key research points.
-3. **Outline**: Generate and customize your chapter outline structure.
-4. **Generate**: Tap "Start Generation" to produce chapters sequentially with live progress tracking.
-5. **Export**: Export as `.docx` to open in Microsoft Word or WPS Office.
 
 ---
 
