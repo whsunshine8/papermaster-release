@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "releaseDate": "2026-09-26",
+  "changelog": [
+    "首次发布 Windows 桌面版本",
+    "支持5步论文生成流程：选题→大纲→开题报告→正文→答辩PPT",
+    "对接 OpenAI 兼容 API（支持通义千问、智谱、Moonshot 等）",
+    "DOCX 文档导出",
+    "本地历史记录保存",
+    "配置管理（API地址、密钥、默认模型）",
+    "现代化 WPF UI 界面"
+  ],
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/tag/v1.0.0-windows",
+  "systemRequirements": "Windows 10/11, .NET 8.0 Runtime"
+}
