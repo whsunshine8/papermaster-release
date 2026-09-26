@@ -17,7 +17,7 @@
 
 | 平台 / 版本 | 文件类型 | 架构 / 系统要求 | 下载方式 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.0.0 (最新桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版](https://github.com/whsunshine8/papermaster-release/releases/download/v1.0.0-windows/PaperMaster-Windows-v1.0.0.zip) | 单文件独立免安装，内含 `PaperMasterWin.exe` |
+| **Windows v1.1.2 (最新桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.2-windows/PaperMaster-Windows-v1.1.2.zip) | 单文件独立免安装，内含 `PaperMasterWin.exe` |
 | **Android v1.1.6 (最新移动版)** | Android 安装包 (`.apk`) | Android 8.0 及以上 (全架构) | [⬇️ 下载 Android APK](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.6/PaperMaster_v1.1.6.apk) | 支持前台后台持续保活生成 |
 
 > 💡 **版本归档**：你可以随时访问 [Releases 官方发布页](https://github.com/whsunshine8/papermaster-release/releases) 查看所有历史版本与详细发布说明。
@@ -30,7 +30,7 @@
 
 ---
 
-### 🖥️ Windows 桌面版特性 (v1.0.0)
+### 🖥️ Windows 桌面版特性 (v1.1.2)
 
 - **原生 C# + WPF 架构**：纯原生 Windows 桌面界面，启动迅速，交互流畅无卡顿。
 - **论文 5 步全流程管线**：
@@ -57,7 +57,7 @@
 
 ### 📝 最近更新日志
 
-#### Windows v1.0.0 (2026-09-26)
+#### Windows v1.1.2 (2026-09-26)
 - **首发 Windows 原生桌面版**：基于 WPF 与 .NET 单文件编译，支持免安装即开即用；
 - **学术全流程五步管线**：任务书、开题报告、文献综述、正文写作、答辩PPT一站式输出；
 - **Word (.docx) 导出支持**：内置 OpenXML 格式化引擎，导出即可直接编辑；
@@ -83,7 +83,7 @@
 
 | Platform / Version | File Type | Requirements | Download Link |
 | :--- | :--- | :--- | :--- |
-| **Windows v1.0.0 (Latest Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.0.0-windows/PaperMaster-Windows-v1.0.0.zip) |
+| **Windows v1.1.2 (Latest Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.2-windows/PaperMaster-Windows-v1.1.2.zip) |
 | **Android v1.1.6 (Latest Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.6/PaperMaster_v1.1.6.apk) |
 
 ### 🛒 Official Store & Support
