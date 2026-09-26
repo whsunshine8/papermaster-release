@@ -1,0 +1,8 @@
+{
+  "versionCode": 114,
+  "versionName": "1.1.4",
+  "updateTitle": "论文智作大师 v1.1.4 正式版",
+  "updateLog": "1. 修复部分机型提示无效安装包问题，补齐标准签名；\n2. 增强后台持续保活生成长文档；\n3. 优化章节大纲层级结构与导出规范。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.4/PaperMaster_v1.1.4.apk",
+  "forceUpdate": false
+}
