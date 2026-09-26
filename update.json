@@ -1,8 +1,8 @@
 {
-  "versionCode": 115,
-  "versionName": "1.1.5",
-  "updateTitle": "论文智作大师 v1.1.5 正式版",
-  "updateLog": "1. 修复应用版本检测逻辑，全面接入高可用 GitHub 极速检测通道；\n2. 修复部分机型无效安装包问题，采用完整系统签名兼容；\n3. 增强后台持续保活运行长篇论文生成。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.5/PaperMaster_v1.1.5.apk",
+  "versionCode": 116,
+  "versionName": "1.1.6",
+  "updateTitle": "论文智作大师 v1.1.6 正式版",
+  "updateLog": "1. 内置集成闲鱼官方 API 商店直达入口与自动发卡链接；\n2. 优化模型配置交互与 API 密钥充值选购渠道；\n3. 持续巩固后台任务持续保活推演稳定性。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.6/PaperMaster_v1.1.6.apk",
   "forceUpdate": false
 }
