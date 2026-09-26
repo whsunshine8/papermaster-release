@@ -1,90 +1,113 @@
 using System;
 using System.Windows;
+using System.Windows.Controls;
+using Newtonsoft.Json;
 
-namespace PaperMasterWin
+namespace PaperMasterWin;
+
+/// <summary>
+/// 配置对话框
+/// </summary>
+public partial class ConfigDialog : Window
 {
-    /// <summary>
-    /// 配置对话框
-    /// </summary>
-    public class ConfigDialog : Window
+    private AppConfig _config;
+    private TextBox _txtApiKey = null!;
+    private TextBox _txtApiUrl = null!;
+    private TextBox _txtModel = null!;
+    private TextBox _txtProjectDir = null!;
+
+    public ConfigDialog(AppConfig config)
     {
-        private TextBox etBaseUrl, etApiKey, etModel, etSystemPrompt, etMaxTokens;
-        private AppConfig config;
+        _config = config;
+        InitializeComponent();
+        LoadConfig();
+    }
 
-        public ConfigDialog(AppConfig config)
-        {
-            this.config = config;
-            Title = "⚙ 配置";
-            Width = 600;
-            Height = 500;
-            WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            ResizeMode = ResizeMode.CanResize;
+    private void InitializeComponent()
+    {
+        Title = "⚙️ 配置";
+        Width = 600;
+        Height = 500;
+        ResizeMode = ResizeMode.CanResize;
+        WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
-            Content = CreateUI();
-        }
+        var grid = new Grid();
+        grid.Margin = new Thickness(10);
+        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
+        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
+        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
+        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
+        grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
 
-        private StackPanel CreateUI()
-        {
-            var panel = new StackPanel { Margin = new Thickness(15) };
+        var lbl1 = new Label { Content = "API Key:" };
+        Grid.SetRow(lbl1, 0);
+        _txtApiKey = new TextBox();
+        Grid.SetRow(_txtApiKey, 0);
+        _txtApiKey.Margin = new Thickness(0, 5, 0, 5);
 
-            // API地址
-            panel.Children.Add(new Label { Content = "API 地址", FontWeight = Bold });
-            etBaseUrl = new TextBox { Text = config.BaseUrl, Height = 35, Margin = new Thickness(0, 0, 0, 15) };
-            panel.Children.Add(etBaseUrl);
+        var lbl2 = new Label { Content = "API URL:" };
+        Grid.SetRow(lbl2, 1);
+        _txtApiUrl = new TextBox();
+        Grid.SetRow(_txtApiUrl, 1);
+        _txtApiUrl.Margin = new Thickness(0, 5, 0, 5);
 
-            // API Key
-            panel.Children.Add(new Label { Content = "API Key", FontWeight = Bold });
-            etApiKey = new TextBox { Text = config.ApiKey, Height = 35, Margin = new Thickness(0, 0, 0, 15) };
-            panel.Children.Add(etApiKey);
+        var lbl3 = new Label { Content = "模型:" };
+        Grid.SetRow(lbl3, 2);
+        _txtModel = new TextBox();
+        Grid.SetRow(_txtModel, 2);
+        _txtModel.Margin = new Thickness(0, 5, 0, 5);
 
-            // 默认模型
-            panel.Children.Add(new Label { Content = "默认模型", FontWeight = Bold });
-            etModel = new TextBox { Text = config.DefaultModel, Height = 35, Margin = new Thickness(0, 0, 0, 15) };
-            panel.Children.Add(etModel);
+        var lbl4 = new Label { Content = "项目目录:" };
+        Grid.SetRow(lbl4, 3);
+        _txtProjectDir = new TextBox();
+        Grid.SetRow(_txtProjectDir, 3);
+        _txtProjectDir.Margin = new Thickness(0, 5, 0, 5);
+        _txtProjectDir.IsEnabled = false;
 
-            // 系统提示
-            panel.Children.Add(new Label { Content = "系统提示 (System Prompt)", FontWeight = Bold });
-            etSystemPrompt = new TextBox
-            {
-                Text = config.SystemPrompt,
-                Height = 100,
-                TextWrapping = Wrap,
-                AcceptsReturn = true,
-                Margin = new Thickness(0, 0, 0, 15)
-            };
-            panel.Children.Add(etSystemPrompt);
+        var btnPanel = new StackPanel();
+        btnPanel.Orientation = Orientation.Horizontal;
+        btnPanel.HorizontalAlignment = HorizontalAlignment.Right;
+        btnPanel.Margin = new Thickness(0, 10, 0, 0);
 
-            // 最大Token数
-            panel.Children.Add(new Label { Content = "最大 Token 数", FontWeight = Bold });
-            etMaxTokens = new TextBox { Text = config.MaxTokens.ToString(), Height = 35, Margin = new Thickness(0, 0, 0, 20) };
-            panel.Children.Add(etMaxTokens);
+        var btnSave = new Button { Content = "保存", Width = 80, Margin = new Thickness(0, 0, 10, 0) };
+        btnSave.Click += (s, e) => SaveConfig();
 
-            // 按钮
-            var btnPanel = new StackPanel { Orientation = Orientation.Horizontal, HorizontalAlignment = HorizontalAlignment.Right };
-            var saveBtn = new Button { Content = "💾 保存", Width = 100, Height = 35, Margin = new Thickness(0, 0, 10, 0) };
-            saveBtn.Click += (s, e) => SaveConfig();
-            var cancelBtn = new Button { Content = "❌ 取消", Width = 100, Height = 35 };
-            cancelBtn.Click += (s, e) => { DialogResult = false; Close(); };
+        var btnCancel = new Button { Content = "取消", Width = 80 };
+        btnCancel.Click += (s, e) => Close();
 
-            btnPanel.Children.Add(saveBtn);
-            btnPanel.Children.Add(cancelBtn);
-            panel.Children.Add(btnPanel);
+        btnPanel.Children.Add(btnSave);
+        btnPanel.Children.Add(btnCancel);
 
-            return panel;
-        }
+        Grid.SetRow(btnPanel, 4);
 
-        private void SaveConfig()
-        {
-            config.BaseUrl = etBaseUrl.Text.Trim();
-            config.ApiKey = etApiKey.Text.Trim();
-            config.DefaultModel = etModel.Text.Trim();
-            config.SystemPrompt = etSystemPrompt.Text.Trim();
-            if (int.TryParse(etMaxTokens.Text.Trim(), out var tokens))
-                config.MaxTokens = tokens;
+        grid.Children.Add(lbl1);
+        grid.Children.Add(_txtApiKey);
+        grid.Children.Add(lbl2);
+        grid.Children.Add(_txtApiUrl);
+        grid.Children.Add(lbl3);
+        grid.Children.Add(_txtModel);
+        grid.Children.Add(lbl4);
+        grid.Children.Add(_txtProjectDir);
+        grid.Children.Add(btnPanel);
 
-            ConfigManager.SaveConfig(config);
-            DialogResult = true;
-            Close();
-        }
+        Content = grid;
+    }
+
+    private void LoadConfig()
+    {
+        _txtApiKey.Text = _config.ApiKey;
+        _txtApiUrl.Text = _config.ApiUrl;
+        _txtModel.Text = _config.Model;
+        _txtProjectDir.Text = _config.ProjectDirectory;
+    }
+
+    private void SaveConfig()
+    {
+        _config.ApiKey = _txtApiKey.Text.Trim();
+        _config.ApiUrl = _txtApiUrl.Text.Trim();
+        _config.Model = _txtModel.Text.Trim();
+        var manager = new ConfigManager();
+        manager.Save(_config);
+        Close();
     }
 }
