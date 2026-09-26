@@ -379,6 +379,7 @@ public partial class MainWindow : Window
             {
                 var clean = chapterRes.Trim();
                 if (!clean.StartsWith(task.Title)) clean = task.Title + "\n\n" + clean;
+                clean = ChapterTask.TrimToWordLimit(clean, maxWords);
                 combined.AppendLine(clean).AppendLine();
                 _project.FullPaper = combined.ToString();
                 TbPaper.Text = _project.FullPaper;

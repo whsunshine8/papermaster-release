@@ -55,6 +55,45 @@ public class ChapterTask
         return s.Trim();
     }
 
+    public static int CountWords(string text)
+    {
+        if (string.IsNullOrEmpty(text)) return 0;
+        int n = 0;
+        for (int i = 0; i < text.Length; i++)
+        {
+            if (!char.IsWhiteSpace(text[i])) n++;
+        }
+        return n;
+    }
+
+    public static string TrimToWordLimit(string text, int limit)
+    {
+        if (string.IsNullOrEmpty(text)) return "";
+        if (CountWords(text) <= limit) return text;
+        int n = 0, cut = -1;
+        for (int i = 0; i < text.Length; i++)
+        {
+            char c = text[i];
+            if (!char.IsWhiteSpace(c)) n++;
+            if (c == '。' || c == '！' || c == '？' || c == '!' || c == '?' || c == '\n')
+            {
+                if (n <= limit) cut = i;
+            }
+            if (n > limit) break;
+        }
+        if (cut >= 0)
+        {
+            return text.Substring(0, cut + 1).Trim();
+        }
+        int n2 = 0, idx = 0;
+        for (; idx < text.Length; idx++)
+        {
+            if (!char.IsWhiteSpace(text[idx])) n2++;
+            if (n2 >= limit - 1) break;
+        }
+        return text.Substring(0, Math.Min(idx + 1, text.Length)).Trim() + "。";
+    }
+
     public static List<ChapterTask> ParseOutlineChapters(string outline, int totalWordCount)
     {
         var tasks = new List<ChapterTask>();
