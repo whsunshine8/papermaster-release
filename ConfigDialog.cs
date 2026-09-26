@@ -43,7 +43,7 @@ public partial class ConfigDialog : Window
         // 提示信息
         var tipText = new TextBlock
         {
-            Text = "🔑 API 授权设置 (API 服务端点已内置隐藏)",
+            Text = "🔑 API 授权设置",
             FontSize = 15,
             FontWeight = FontWeights.Bold,
             Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(30, 41, 59)),
