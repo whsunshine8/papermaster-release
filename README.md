@@ -18,7 +18,7 @@
 | 平台 / 版本 | 文件类型 | 架构 / 系统要求 | 下载方式 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
 | **Windows v1.1.6 (最新桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.6-windows/PaperMaster-Windows-v1.1.6.zip) | 单文件独立免安装，内含 `PaperMasterWin.exe` |
-| **Android v1.1.7 (最新移动版)** | Android 安装包 (`.apk`) | Android 8.0 及以上 (全架构) | [⬇️ 下载 Android APK](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.7/PaperMaster_v1.1.7.apk) | 支持前台后台持续保活生成 |
+| **Android v1.1.8 (最新移动版)** | Android 安装包 (`.apk`) | Android 8.0 及以上 (全架构) | [⬇️ 下载 Android APK](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.8/PaperMaster_v1.1.8.apk) | 支持前台后台持续保活生成 |
 
 > 💡 **版本归档**：你可以随时访问 [Releases 官方发布页](https://github.com/whsunshine8/papermaster-release/releases) 查看所有历史版本与详细发布说明。
 
@@ -44,7 +44,7 @@
 
 ---
 
-### 📱 Android 移动版特性 (v1.1.7)
+### 📱 Android 移动版特性 (v1.1.8)
 
 - 🧠 **学术大纲智能推理**：输入题目即可生成多级规范大纲。
 - 📖 **长篇章节流式生成**：克服 Token 截断，保障长文学术连贯性。
@@ -63,7 +63,7 @@
 - **Word (.docx) 导出支持**：内置 OpenXML 格式化引擎，导出即可直接编辑；
 - **自定义 API 配置**：支持自由配置 API Key 与主流兼容模型端点。
 
-#### Android v1.1.7 (2026-09-26)
+#### Android v1.1.8 (2026-09-26)
 - **API 商店嵌入**：设置界面内置闲鱼官方 API 商店一键直达入口；
 - **检测通道升级**：接入高可用 GitHub 极速更新检测接口；
 - **签名兼容重构**：全量补齐 Android 系统级 v2/v3 签名校验。
@@ -84,7 +84,7 @@
 | Platform / Version | File Type | Requirements | Download Link |
 | :--- | :--- | :--- | :--- |
 | **Windows v1.1.6 (Latest Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.6-windows/PaperMaster-Windows-v1.1.6.zip) |
-| **Android v1.1.7 (Latest Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.7/PaperMaster_v1.1.7.apk) |
+| **Android v1.1.8 (Latest Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.8/PaperMaster_v1.1.8.apk) |
 
 ### 🛒 Official Store & Support
 
