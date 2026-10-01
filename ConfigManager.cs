@@ -10,7 +10,7 @@ public class AppConfig
     public string ApiKey { get; set; } = string.Empty;
 
     [JsonProperty("api_url")]
-    public string ApiUrl { get; set; } = "https://aiapi.whsunshine.link/v1/chat/completions";
+    public string ApiUrl { get; set; } = "http://token.cnkiedu.cn/v1/chat/completions";
 
     [JsonProperty("model")]
     public string Model { get; set; } = "qwen3-235b-a22b";
