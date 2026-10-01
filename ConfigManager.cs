@@ -28,19 +28,30 @@ public class ConfigManager
 
     public AppConfig Load()
     {
+        AppConfig cfg = new AppConfig();
         if (File.Exists(ConfigFile))
         {
             try
             {
                 var json = File.ReadAllText(ConfigFile);
-                return JsonConvert.DeserializeObject<AppConfig>(json) ?? new AppConfig();
+                cfg = JsonConvert.DeserializeObject<AppConfig>(json) ?? new AppConfig();
             }
             catch
             {
-                return new AppConfig();
+                cfg = new AppConfig();
             }
         }
-        return new AppConfig();
+
+        // 关键自动迁移：若用户本地历史 config.json 存有旧域名或旧IP，自动平滑升级为最新默认地址并保存
+        if (string.IsNullOrWhiteSpace(cfg.ApiUrl) || 
+            cfg.ApiUrl.Contains("113.57.132.2") || 
+            cfg.ApiUrl.Contains("aiapi.whsunshine.link"))
+        {
+            cfg.ApiUrl = "http://token.cnkiedu.cn/v1/chat/completions";
+            Save(cfg);
+        }
+
+        return cfg;
     }
 
     public void Save(AppConfig config)
