@@ -333,7 +333,36 @@ public partial class MainWindow : Window
         BtnGeneratePaper.IsEnabled = false;
         var combined = new StringBuilder();
 
-        SetStatus("【流水线 1/3】正在撰写中英文摘要与核心关键词...");
+        SetStatus("【流水线 1/4】正在测试 gpt-image-2.5-flare 图像生成支持...");
+        bool canGenerateImage = false;
+        try
+        {
+            var testBody = new
+            {
+                model = "gpt-image-2.5-flare",
+                messages = new[] { new { role = "user", content = "ping" } },
+                max_tokens = 10
+            };
+            var testContent = new StringContent(JsonConvert.SerializeObject(testBody), Encoding.UTF8, "application/json");
+            var testReq = new HttpRequestMessage(HttpMethod.Post, _config.ApiUrl) { Content = testContent };
+            if (!string.IsNullOrWhiteSpace(_config.ApiKey))
+                testReq.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _config.ApiKey.Trim());
+
+            var testResp = await _httpClient.SendAsync(testReq);
+            if (testResp.IsSuccessStatusCode)
+            {
+                var testJson = await testResp.Content.ReadAsStringAsync();
+                if (testJson.Contains("\"choices\""))
+                {
+                    canGenerateImage = true;
+                    SetStatus("🎨 gpt-image-2.5-flare 图像模型检测可用，将在正文相关小节智能配图！");
+                    await Task.Delay(1000);
+                }
+            }
+        }
+        catch { }
+
+        SetStatus("【流水线 2/4】正在撰写中英文摘要与核心关键词...");
         string sysAbs = "你是一位高校学术委员会专家与核心期刊审稿人。";
         string promptAbs = "请根据以下毕业论文信息，撰写标准的【中文摘要与关键词】和【英文摘要(Abstract)与Keywords】：\n" +
                 "【论文题目】：" + _project.Title + "\n" +
@@ -382,6 +411,38 @@ public partial class MainWindow : Window
                 var clean = chapterRes.Trim();
                 if (!clean.StartsWith(task.Title)) clean = task.Title + "\n\n" + clean;
                 clean = ChapterTask.TrimToWordLimit(clean, maxWords);
+
+                // 如果测试通过支持图像生成，且属于核心设计/实验章节，尝试生成插图插入文章
+                if (canGenerateImage && (task.Title.Contains("设计") || task.Title.Contains("实验") || task.Title.Contains("系统") || task.Title.Contains("模型") || task.Title.Contains("实现")))
+                {
+                    try
+                    {
+                        SetStatus($"🎨 正在为【{task.Title}】生成学术架构/实验插图...");
+                        var imgPrompt = $"为学术论文章节【{task.Title}】绘制一张高清学术架构图、技术流向图或数据对比分析图：论文题目《{_project.Title}》";
+                        var imgBody = new
+                        {
+                            model = "gpt-image-2.5-flare",
+                            messages = new[] { new { role = "user", content = imgPrompt } }
+                        };
+                        var imgContent = new StringContent(JsonConvert.SerializeObject(imgBody), Encoding.UTF8, "application/json");
+                        var imgReq = new HttpRequestMessage(HttpMethod.Post, _config.ApiUrl) { Content = imgContent };
+                        if (!string.IsNullOrWhiteSpace(_config.ApiKey))
+                            imgReq.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _config.ApiKey.Trim());
+                        var imgResp = await _httpClient.SendAsync(imgReq);
+                        if (imgResp.IsSuccessStatusCode)
+                        {
+                            var imgJson = await imgResp.Content.ReadAsStringAsync();
+                            dynamic imgObj = JsonConvert.DeserializeObject(imgJson);
+                            string imgUrlOrContent = imgObj?.choices?[0]?.message?.content;
+                            if (!string.IsNullOrEmpty(imgUrlOrContent))
+                            {
+                                clean += $"\n\n【图 {curNum}-1：{task.Title} 核心技术逻辑与实验流程图】\n{imgUrlOrContent}\n";
+                            }
+                        }
+                    }
+                    catch { }
+                }
+
                 combined.AppendLine(clean).AppendLine();
                 _project.FullPaper = combined.ToString();
                 TbPaper.Text = _project.FullPaper;
