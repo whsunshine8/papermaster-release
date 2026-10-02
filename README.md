@@ -13,12 +13,12 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Android-brightgreen)](https://github.com/whsunshine8/papermaster-release)
 [![License](https://img.shields.io/badge/License-MIT-orange)](#)
 
-### 📥 软件下载 (v1.1.9 双端统一发布)
+### 📥 软件下载 (v1.2.0 双端统一发布)
 
 | 平台 / 版本 | 文件类型 | 架构 / 系统要求 | 官方下载直链 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.1.9 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.9/PaperMaster-Windows-v1.1.9.zip) | 单文件独立免安装，内含 `PaperMasterWin.exe` |
-| **Android v1.1.9 (移动版)** | Android 安装包 (`.apk`) | Android 8.0 及以上 (全架构通用) | [⬇️ 下载 Android 安装包](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.9/PaperMaster_v1.1.9.apk) | 支持前后台持续保活推演长文 |
+| **Windows v1.2.0 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.0/PaperMaster-Windows-v1.2.0.zip) | 单文件独立免安装，内含 `PaperMasterWin.exe` |
+| **Android v1.2.0 (移动版)** | Android 安装包 (`.apk`) | Android 8.0 及以上 (全架构通用) | [⬇️ 下载 Android 安装包](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.0/PaperMaster_v1.2.0.apk) | 支持答辩PPTX生成、精美模板选择与深色模式自适应 |
 
 > 🌐 **在线体验站**：你可以访问 [https://papermaster.whsunshine.link/](https://papermaster.whsunshine.link/) 免费在线体验学术大纲规划。  
 > 💡 **版本归档**：可随时访问 [Releases 官方发布页](https://github.com/whsunshine8/papermaster-release/releases) 查看详细更新日志。
@@ -61,6 +61,13 @@
 ---
 
 ### 📝 最近更新日志
+
+#### v1.2.0 (2026-10-02) - 双端统一正式版
+- **【AI 智能 PPTX 生成】**：深度打通答辩 PPTX 制作链路，自动将答辩自述稿作为正文内容，论文题目作为主题；
+- **【学术模板在线选择】**：客户端集成科技蓝、严谨灰、学术绿、工科蓝等多种精美学术排版模板；
+- **【实时动态进度感知】**：大纲设计、模版绑定、编译渲染、打包下载全流程状态实时反馈；
+- **【暗黑/深色模式适配】**：移动端全面深度适配夜间模式自适应跟随系统，夜晚学术创作输入更清晰护眼；
+- **【双端统一发布】**：Windows 桌面端与 Android 移动端统一升级至 **v1.2.0**，统一构建与同步发版。
 
 #### v1.1.9 (2026-09-27) - 双端统一正式版
 - **版本号统一**：Windows 桌面端与 Android 移动端版本号统一定制为 **v1.1.9**，合并为单一统一说明与联合发布页；
