@@ -202,15 +202,36 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
-                        <Button x:Name="BtnGenerateDefense" Content="🎤 生成答辩演讲自述稿" Height="34" Padding="14,0,14,0"
-                                Background="#2563EB" Foreground="#FFFFFF" BorderBrush="#2563EB" Margin="0,0,10,0" Click="BtnGenerateDefense_Click"/>
-                        <Button x:Name="BtnGeneratePpt" Content="📊 生成标准 Markdown 答辩PPT" Height="34" Padding="14,0,14,0"
-                                Background="#7C3AED" Foreground="#FFFFFF" BorderBrush="#7C3AED" Margin="0,0,10,0" Click="BtnGeneratePpt_Click"/>
-                        <Button x:Name="BtnExportDefenseDocx" Content="💾 导出答辩演讲稿 Word" Height="34" Padding="14,0,14,0"
-                                Background="#ECFDF5" Foreground="#059669" BorderBrush="#A7F3D0" Margin="0,0,10,0" Click="BtnExportDefenseDocx_Click"/>
-                        <Button x:Name="BtnExportPptDocx" Content="💾 导出PPT设计大纲 Word" Height="34" Padding="14,0,14,0"
-                                Background="#ECFDF5" Foreground="#059669" BorderBrush="#A7F3D0" Margin="0,0,10,0" Click="BtnExportPptDocx_Click"/>
+                    <StackPanel Grid.Row="0" Margin="0,0,0,12">
+                        <!-- 第一行：主功能按钮与模版联动 -->
+                        <WrapPanel Orientation="Horizontal" Margin="0,0,0,8">
+                            <Button x:Name="BtnGenerateDefense" Content="🎤 生成答辩演讲自述稿" Height="34" Padding="14,0,14,0"
+                                    Background="#2563EB" Foreground="#FFFFFF" BorderBrush="#2563EB" Margin="0,0,10,6" Click="BtnGenerateDefense_Click"/>
+                            <Button x:Name="BtnGeneratePptx" Content="⚡ AI一键生成高精答辩PPT (.pptx)" Height="34" Padding="14,0,14,0"
+                                    Background="#4338CA" Foreground="#FFFFFF" BorderBrush="#4338CA" FontWeight="Bold" Margin="0,0,10,6" Click="BtnGeneratePptx_Click"/>
+                            <Button x:Name="BtnDownloadPptx" Content="🔗 浏览器打开/下载 PPTX" Height="34" Padding="14,0,14,0"
+                                    Background="#FEF3C7" Foreground="#B45309" BorderBrush="#FDE68A" FontWeight="Bold" Margin="0,0,10,6" Visibility="Collapsed" Click="BtnDownloadPptx_Click"/>
+                            <Button x:Name="BtnGeneratePpt" Content="📊 生成 Markdown 大纲" Height="34" Padding="12,0,12,0"
+                                    Background="#F1F5F9" Foreground="#475569" BorderBrush="#CBD5E1" Margin="0,0,10,6" Click="BtnGeneratePpt_Click"/>
+                            <Button x:Name="BtnExportDefenseDocx" Content="💾 导出答辩稿 Word" Height="34" Padding="12,0,12,0"
+                                    Background="#ECFDF5" Foreground="#059669" BorderBrush="#A7F3D0" Margin="0,0,10,6" Click="BtnExportDefenseDocx_Click"/>
+                            <Button x:Name="BtnExportPptDocx" Content="💾 导出PPT大纲 Word" Height="34" Padding="12,0,12,0"
+                                    Background="#ECFDF5" Foreground="#059669" BorderBrush="#A7F3D0" Margin="0,0,10,6" Click="BtnExportPptDocx_Click"/>
+                        </WrapPanel>
+
+                        <!-- 第二行：PPT模板分类与二级联动 -->
+                        <Grid Margin="0,2,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="220"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="🎨 答辩PPT风格大类:" VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="SemiBold" Foreground="#334155"/>
+                            <ComboBox Grid.Column="1" x:Name="CbPptCategory" Height="32" FontSize="12" VerticalContentAlignment="Center" Margin="0,0,16,0" SelectionChanged="CbPptCategory_SelectionChanged"/>
+                            <TextBlock Grid.Column="2" Text="🖼️ 精选学术模板 (300套):" VerticalAlignment="Center" Margin="0,0,8,0" FontWeight="SemiBold" Foreground="#334155"/>
+                            <ComboBox Grid.Column="3" x:Name="CbPptTemplate" Height="32" FontSize="12" VerticalContentAlignment="Center"/>
+                        </Grid>
                     </StackPanel>
 
                     <Grid Grid.Row="1">
