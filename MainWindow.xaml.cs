@@ -138,6 +138,17 @@ public partial class MainWindow : Window
         TbPaper.Text = _project.FullPaper;
         TbDefense.Text = _project.DefenseSpeech;
         TbPpt.Text = _project.PptOutline;
+
+        var url = ExtractPptxUrl(_project.PptOutline);
+        if (!string.IsNullOrEmpty(url))
+        {
+            _lastGeneratedPptxUrl = url;
+            BtnDownloadPptx.Visibility = Visibility.Visible;
+        }
+        else
+        {
+            BtnDownloadPptx.Visibility = Visibility.Collapsed;
+        }
     }
 
     private async Task<string> CallApiWithTokensAsync(string systemPrompt, string userPrompt, int maxTokens = 0)
@@ -622,6 +633,17 @@ public partial class MainWindow : Window
                 {
                     _lastGeneratedPptxUrl = pptUrl;
                     BtnDownloadPptx.Visibility = Visibility.Visible;
+
+                    var infoText = $"🎉 答辩演示 PPTX 生成完毕！\n\n" +
+                                   $"【论文题目】: {title}\n" +
+                                   $"【所选模版】: {(template != null ? template.Name : "精美学术模板")}\n" +
+                                   $"【文件下载链接】:\n{pptUrl}\n\n" +
+                                   $"💡 提示：点击上方「🔗 浏览器打开/下载 PPTX」按钮，即可直接在浏览器或 Office 中打开预览与保存！";
+
+                    TbPpt.Text = infoText;
+                    _project.PptOutline = infoText;
+                    HistoryManager.SaveProject(_project);
+
                     SetStatus("🎉 答辩 PPTX 已成功生成！点击上方按钮即可下载或打开。");
 
                     var res = MessageBox.Show($"🎉 恭喜！高精学术答辩 PPT (.pptx) 已成功生成！\n\n下载链接:\n{pptUrl}\n\n是否立即在默认浏览器中打开下载？", "生成成功", MessageBoxButton.YesNo, MessageBoxImage.Information);
