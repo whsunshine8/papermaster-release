@@ -93,6 +93,17 @@ public partial class MainWindow : Window
         };
         foreach (var t in templates) CbTemplate.Items.Add(t);
         CbTemplate.SelectedIndex = 0;
+
+        // 初始化 PPT 分类与模版二级联动
+        CbPptCategory.Items.Clear();
+        foreach (var cat in PptTemplateManager.GetCategoryNames())
+        {
+            CbPptCategory.Items.Add(cat);
+        }
+        if (CbPptCategory.Items.Count > 0)
+        {
+            CbPptCategory.SelectedIndex = 0;
+        }
     }
 
     private void SyncUiToProject()
@@ -522,6 +533,144 @@ public partial class MainWindow : Window
         {
             SetStatus("去AI味处理遇到问题。");
         }
+    }
+
+    private void CbPptCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        var selectedCat = CbPptCategory.SelectedItem?.ToString();
+        if (string.IsNullOrWhiteSpace(selectedCat)) return;
+
+        CbPptTemplate.Items.Clear();
+        var templates = PptTemplateManager.GetTemplates(selectedCat);
+        foreach (var t in templates)
+        {
+            CbPptTemplate.Items.Add(t);
+        }
+        if (CbPptTemplate.Items.Count > 0)
+        {
+            CbPptTemplate.SelectedIndex = 0;
+        }
+    }
+
+    private string _lastGeneratedPptxUrl = "";
+
+    private async void BtnGeneratePptx_Click(object sender, RoutedEventArgs e)
+    {
+        var speech = string.IsNullOrWhiteSpace(TbDefense.Text) ? _project.DefenseSpeech : TbDefense.Text.Trim();
+        if (string.IsNullOrWhiteSpace(speech))
+        {
+            MessageBox.Show("答辩自述文稿为空，请先点击【生成答辩演讲自述稿】！", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return;
+        }
+
+        var template = CbPptTemplate.SelectedItem as TemplateItem;
+        var title = string.IsNullOrWhiteSpace(_project.Title) ? "毕业论文答辩" : _project.Title;
+
+        BtnGeneratePptx.IsEnabled = false;
+        BtnDownloadPptx.Visibility = Visibility.Collapsed;
+        SetStatus("🚀 正在连接 AI PPT 生成代理中心...");
+
+        try
+        {
+            using var client = new System.Net.Http.HttpClient { Timeout = TimeSpan.FromMinutes(4) };
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _config.ApiKey);
+
+            var promptBuilder = new System.Text.StringBuilder();
+            promptBuilder.AppendLine($"【论文题目】: {title}\n");
+            if (template != null)
+            {
+                promptBuilder.AppendLine($"【指定模板ID】: {template.Id}");
+                promptBuilder.AppendLine($"【指定模板名称】: {template.Name}\n");
+            }
+            promptBuilder.AppendLine("【答辩自述正文】:\n" + speech);
+
+            var reqObj = new
+            {
+                model = "aimengmeng-ppt",
+                messages = new[]
+                {
+                    new { role = "user", content = promptBuilder.ToString() }
+                }
+            };
+
+            var jsonContent = new System.Net.Http.StringContent(
+                System.Text.Json.JsonSerializer.Serialize(reqObj),
+                System.Text.Encoding.UTF8,
+                "application/json"
+            );
+
+            SetStatus("📝 正在根据答辩文稿规划逐页排版与生成 PPTX 文件 (约需15-30秒)...");
+
+            var resp = await client.PostAsync("https://token.whsunshine.link/v1/chat/completions", jsonContent);
+            var respStr = await resp.Content.ReadAsStringAsync();
+
+            if (!resp.IsSuccessStatusCode)
+            {
+                SetStatus($"PPT生成请求失败 ({resp.StatusCode})");
+                MessageBox.Show($"PPT生成服务异常: {respStr}", "生成失败", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            using var doc = System.Text.Json.JsonDocument.Parse(respStr);
+            var root = doc.RootElement;
+            if (root.TryGetProperty("choices", out var choices) && choices.GetArrayLength() > 0)
+            {
+                var content = choices[0].GetProperty("message").GetProperty("content").GetString() ?? "";
+                var pptUrl = ExtractPptxUrl(content);
+
+                if (!string.IsNullOrEmpty(pptUrl))
+                {
+                    _lastGeneratedPptxUrl = pptUrl;
+                    BtnDownloadPptx.Visibility = Visibility.Visible;
+                    SetStatus("🎉 答辩 PPTX 已成功生成！点击上方按钮即可下载或打开。");
+
+                    var res = MessageBox.Show($"🎉 恭喜！高精学术答辩 PPT (.pptx) 已成功生成！\n\n下载链接:\n{pptUrl}\n\n是否立即在默认浏览器中打开下载？", "生成成功", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                    if (res == MessageBoxResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = pptUrl, UseShellExecute = true });
+                    }
+                }
+                else
+                {
+                    SetStatus("PPT已生成但未能解析出文件直链。");
+                    MessageBox.Show($"返回内容中未识别到下载链接:\n{content}", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            else
+            {
+                SetStatus("PPT生成服务未返回有效内容。");
+            }
+        }
+        catch (Exception ex)
+        {
+            SetStatus($"PPT生成异常: {ex.Message}");
+            MessageBox.Show($"PPT生成遇到错误: {ex.Message}", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+        finally
+        {
+            BtnGeneratePptx.IsEnabled = true;
+        }
+    }
+
+    private void BtnDownloadPptx_Click(object sender, RoutedEventArgs e)
+    {
+        if (!string.IsNullOrWhiteSpace(_lastGeneratedPptxUrl))
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = _lastGeneratedPptxUrl, UseShellExecute = true });
+        }
+    }
+
+    private static string ExtractPptxUrl(string text)
+    {
+        if (string.IsNullOrEmpty(text)) return "";
+        int idx = text.IndexOf("https://", StringComparison.OrdinalIgnoreCase);
+        if (idx == -1) idx = text.IndexOf("http://", StringComparison.OrdinalIgnoreCase);
+        if (idx == -1) return "";
+
+        string sub = text.Substring(idx);
+        char[] stops = new[] { ' ', '\n', '\r', ')', ']', '"', '\'', '<', '>' };
+        int end = sub.IndexOfAny(stops);
+        return end == -1 ? sub : sub.Substring(0, end);
     }
 
     private void BtnNextToDefense_Click(object sender, RoutedEventArgs e)
