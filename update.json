@@ -1,9 +1,9 @@
 {
-  "versionCode": 120,
-  "versionName": "1.2.0",
-  "updateTitle": "论文智作大师 v1.2.0 (Windows & Android 双端统一版)",
-  "updateLog": "1. 【AI PPT深度进化】：答辩PPT支持智能选择学术答辩专属排版模板，支持实时进度动态反馈与一键打开下载；\n2. 【多平台统一发布】：Windows桌面版与Android手机端统一升级至v1.2.0；\n3. 【暗黑夜晚模式深度适配】：全面完美适配夜间主题跟随系统，夜间学术创作与打字更加护眼；\n4. 【四大AIGC平台深度防红】：维普、格子达、PaperPass、知网底层特征对抗重构；\n5. 【学术规范排版】：全流程开题报告、答辩自述稿、标准Word导出优化。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.0/PaperMaster_v1.2.0.apk",
-  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.0/PaperMaster-Windows-v1.2.0.zip",
+  "versionCode": 121,
+  "versionName": "1.2.1",
+  "updateTitle": "论文智作大师 v1.2.1 (双端重要修复与体验版)",
+  "updateLog": "1. 【历史记录与答辩PPT持久化修复】：修复生成答辩自述稿与PPTX下载链接后退出或历史记录中未及时存档的严重问题，支持完整存档与随时重新调起打开；\n2. 【PPT模版二级联动升级】：300套精美学术答辩模版接入风格大类二级联动，分类明确、极速筛选；\n3. 【双端体验同步统一】：Windows 桌面版与 Android 移动端同步升级至 v1.2.1。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.1/PaperMaster_v1.2.1.apk",
+  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.1/PaperMaster-Windows-v1.2.1.zip",
   "forceUpdate": false
 }
