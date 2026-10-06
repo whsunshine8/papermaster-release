@@ -1,9 +1,9 @@
 {
-  "versionCode": 121,
-  "versionName": "1.2.1",
-  "updateTitle": "论文智作大师 v1.2.1 (双端重要修复与体验版)",
-  "updateLog": "1. 【历史记录与答辩PPT持久化修复】：修复生成答辩自述稿与PPTX下载链接后退出或历史记录中未及时存档的严重问题，支持完整存档与随时重新调起打开；\n2. 【PPT模版二级联动升级】：300套精美学术答辩模版接入风格大类二级联动，分类明确、极速筛选；\n3. 【双端体验同步统一】：Windows 桌面版与 Android 移动端同步升级至 v1.2.1。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.1/PaperMaster_v1.2.1.apk",
-  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.1/PaperMaster-Windows-v1.2.1.zip",
+  "versionCode": 122,
+  "versionName": "1.2.2",
+  "updateTitle": "论文智作大师 v1.2.2 (HTTPS全链路安全加固版)",
+  "updateLog": "1. 【全链路传输安全升级】：将双端默认模型通信及大纲接口全部升级至 HTTPS 加密协议，防止学术草稿中间人嗅探；\n2. 【协议白名单校验】：Windows 客户端针对 PPT 外部下载链接注入协议白名单防御，避免命令执行风险；\n3. 【品牌设计哲学落地】：强化纯单机本地化与零云端草稿留存的核心安全原则；\n4. 【全端版本统一发布】：Windows 桌面版与 Android 移动端同步升级至 v1.2.2。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.2/PaperMaster_v1.2.2.apk",
+  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.2/PaperMaster-Windows-v1.2.2.zip",
   "forceUpdate": false
 }
