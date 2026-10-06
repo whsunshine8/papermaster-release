@@ -1,9 +1,9 @@
 {
-  "versionCode": 122,
-  "versionName": "1.2.2",
-  "updateTitle": "论文智作大师 v1.2.2 (HTTPS全链路安全加固版)",
-  "updateLog": "1. 【全链路传输安全升级】：将双端默认模型通信及大纲接口全部升级至 HTTPS 加密协议，防止学术草稿中间人嗅探；\n2. 【协议白名单校验】：Windows 客户端针对 PPT 外部下载链接注入协议白名单防御，避免命令执行风险；\n3. 【品牌设计哲学落地】：强化纯单机本地化与零云端草稿留存的核心安全原则；\n4. 【全端版本统一发布】：Windows 桌面版与 Android 移动端同步升级至 v1.2.2。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.2/PaperMaster_v1.2.2.apk",
-  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.2/PaperMaster-Windows-v1.2.2.zip",
+  "versionCode": 123,
+  "versionName": "1.2.3",
+  "updateTitle": "论文智作大师 v1.2.3 (正式签名与全网兼容版)",
+  "updateLog": "1. 【彻底修复安装签名故障】：补齐 Android 官方 V1 (Jar Signature) + V2 全套标准签名，彻底解决部分机型解析包失败或无法安装的问题；\n2. 【全链路传输安全升级】：双端默认 API 通信全面切换为 HTTPS 加密协议；\n3. 【协议白名单校验】：Windows 客户端针对外部链接增加协议防御；\n4. 【全端版本统一发布】：Windows 桌面版与 Android 移动端同步升级至 v1.2.3。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.3/PaperMaster_v1.2.3.apk",
+  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.3/PaperMaster-Windows-v1.2.3.zip",
   "forceUpdate": false
 }
