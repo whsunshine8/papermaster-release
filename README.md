@@ -13,12 +13,12 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Android-brightgreen)](https://github.com/whsunshine8/papermaster-release)
 [![License](https://img.shields.io/badge/License-MIT-orange)](#)
 
-### 📥 软件下载 (v1.2.1 双端统一发布)
+### 📥 软件下载 (v1.2.4 双端统一发布)
 
 | 平台 / 版本 | 文件类型 | 架构 / 系统要求 | 官方下载直链 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.2.1 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.1/PaperMaster-Windows-v1.2.1.zip) | 单文件绿色免安装，解压即用 |
-| **Android v1.2.1 (移动版)** | 手机安装包 (`.apk`) | Android 8.0 及以上 | [⬇️ 下载 Android 安装包 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.1/PaperMaster_v1.2.1.apk) | 支持前台服务长保活、夜间模式与历史持久化 |
+| **Windows v1.2.4 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.4/PaperMaster-Windows-v1.2.4.zip) | 单文件绿色免安装，解压即用 |
+| **Android v1.2.4 (移动版)** | 手机安装包 (`.apk`) | Android 8.0 及以上 | [⬇️ 下载 Android 安装包 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.4/PaperMaster_v1.2.4.apk) | 支持前台服务长保活、夜间模式与历史持久化 |
 
 > 🌐 **在线体验站**：你可以访问 [https://papermaster.whsunshine.link/](https://papermaster.whsunshine.link/) 免费在线体验学术大纲规划。  
 > 💡 **版本归档**：可随时访问 [Releases 官方发布页](https://github.com/whsunshine8/papermaster-release/releases) 查看详细更新日志。
@@ -76,6 +76,17 @@
 
 ### 📝 最近更新日志
 
+#### v1.2.4 (2026-10-06) - 全多语言支持与国际学术标准版
+- **【新增论文撰写语言选择】**：支持简体中文（默认）、繁体中文（中国台湾/正体中文）、繁体中文（中国香港/粤语繁体），以及英语、日语、德语、法语、俄语、韩语等主流学术外语写作；
+- **【多语言生成链路深度对齐】**：大纲规划、开题报告、分章万字正文流水线、中外文双语摘要及答辩自述稿全面深度绑定所选语言；
+- **【全端工程历史持久化】**：本地工程记录与断点续写全面支持语言字段无缝保存与恢复；
+- **【双端统一发布】**：Android 端（完整 V1+V2 官方标准签名包）与 Windows 原生桌面单文件绿色版统一构建并发布至 **v1.2.4**。
+
+#### v1.2.3 (2026-10-06) - 双重标准签名与HTTPS安全加固版
+- **【修复 Android 安装签名问题】**：补充官方标准 V1 + V2 完整数字证书签名，彻底解决部分设备安装解析失败；
+- **【HTTPS 全链路安全升级】**：全面升级大模型与体验站通信为 HTTPS 协议；
+- **【安全白名单校验】**：Windows 客户端增加外部浏览器调用协议白名单拦截。
+
 #### v1.2.1 (2026-10-02) - 双端重要修复与体验版
 - **【历史记录与答辩PPT持久化修复】**：彻底修复答辩自述文稿生成与 PPTX 下载直链生成后退出或切换时未及时本地存档的严重问题，历史恢复时自动提取直链并唤醒下载/打开按钮；
 - **【300 套模板二级联动】**：双端支持按风格分类（官方精选、计算机工科、严谨答辩、党建思政、经管金融、生化医疗）快速筛选 300 套专属排版模板；
@@ -100,14 +111,24 @@
 ## 🌐 English Description
 
 > An automated AI-powered academic thesis and research report creation assistant.  
-> Supporting both **Windows Desktop** and **Android Mobile** platforms unified at **v1.1.9**. Features deep outline reasoning, coherent long-form multi-chapter generation, proposal/review/defense pipeline, anti-AIGC detection algorithms (CQVIP, Gocheck, PaperPass, CNKI), and standard Word (.docx) export.
+> Supporting both **Windows Desktop** and **Android Mobile** platforms unified at **v1.2.4**. Features multi-language academic paper generation (Simplified Chinese, Traditional Chinese [TW/HK], English, Japanese, German, etc.), deep outline reasoning, coherent long-form multi-chapter generation, proposal/review/defense pipeline, anti-AIGC detection algorithms (CQVIP, Gocheck, PaperPass, CNKI), and standard Word (.docx) export.
 
-### 📥 Download (v1.1.9)
+### 📥 Download (v1.2.4)
 
-| Platform / Version | File Type | System Requirements | Download Link |
-| :--- | :--- | :--- | :--- |
-| **Windows v1.1.9 (Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.9/PaperMaster-Windows-v1.1.9.zip) |
-| **Android v1.1.9 (Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.1.9/PaperMaster_v1.1.9.apk) |
+| Platform / Version | File Type | System Requirements | Download Link | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **Windows v1.2.4 (Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.4/PaperMaster-Windows-v1.2.4.zip) | Standalone portable executable, no install required |
+| **Android v1.2.4 (Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.4/PaperMaster_v1.2.4.apk) | Foreground persistence, dark mode, dual V1+V2 signatures |
+
+---
+
+### 🌟 Key Updates in v1.2.4
+- **Multi-Language Support**: Seamlessly generate academic theses in Simplified Chinese (Default), Traditional Chinese (Taiwan / Hong Kong), English (Academic Standard), Japanese, German, French, Russian, Korean, and Spanish.
+- **Full Pipeline Alignment**: Outline reasoning, proposal, chapter-by-chapter body text, and defense speeches strictly follow the selected language style.
+- **Privacy & Pure Local Sandbox**: 100% offline data retention with zero cloud draft storage.
+- **Security & Integrity**: Complete Android V1 + V2 signatures and HTTPS API enforcement.
+
+---
 
 ---
 
