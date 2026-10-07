@@ -1,9 +1,9 @@
 {
-  "versionCode": 124,
-  "versionName": "1.2.4",
-  "updateTitle": "论文智作大师 v1.2.4 (全多语言支持与国际学术标准版)",
-  "updateLog": "1. 【新增论文撰写语言选择】：支持简体中文（默认）、繁体中文（中国台湾/中国香港）、英语、日语、德语、法语、俄语、韩语等主流学术语言写作；\n2. 【多语言生成深度对齐】：大纲规划、开题报告、分章万字正文及答辩自述稿全面绑定所选语言规范；\n3. 【全端历史记录与断点续写】：支持多语言配置持久化存储与重新载入；\n4. 【全端版本统一发布】：Windows 桌面版与 Android 移动端同步升级至 v1.2.4。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.4/PaperMaster_v1.2.4.apk",
-  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.4/PaperMaster-Windows-v1.2.4.zip",
+  "versionCode": 125,
+  "versionName": "1.2.5",
+  "updateTitle": "论文智作大师 v1.2.5 (纯学术流水线·极速生成版)",
+  "updateLog": "1. 【移除图片生成与 GPT-IMAGE 功能】：彻底移除流水线中对 gpt-image-2.5-flare 的启动前自检测试与正文插图生成逻辑，专注于纯学术万字长文文本与标准图注说明，生成速度大幅提升，避免无谓接口等待与超时；\n2. 【多语言论文写作全支持】：支持简体/繁体中文及英、日、德等国际主流学术语言；\n3. 【全端版本统一发布】：Windows 桌面版与 Android 移动端同步升级至 v1.2.5。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.5/PaperMaster_v1.2.5.apk",
+  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.5/PaperMaster-Windows-v1.2.5.zip",
   "forceUpdate": false
 }
