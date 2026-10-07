@@ -1,9 +1,9 @@
 {
-  "versionCode": 126,
-  "versionName": "1.2.6",
-  "updateTitle": "论文智作大师 v1.2.6 (外文学术全流程适配与纯长文版)",
-  "updateLog": "1. 【外文学术论文全流程适配】：彻底重构英文、日文、德文、法文等外语论文的摘要及参考文献生成提示词，避免中英文混杂；\n2. 【动态匹配外语参考文献标题】：自动适配 References、Literaturverzeichnis 等多语种标题及国际权威 DOI 查验表；\n3. 【移除图片生成与探测】：彻底移除 gpt-image 冗余逻辑，大幅提升万字长文生成效率与稳定性；\n4. 【全端版本统一发布】：Windows 桌面版与 Android 移动端同步升级至 v1.2.6。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.6/PaperMaster_v1.2.6.apk",
-  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.6/PaperMaster-Windows-v1.2.6.zip",
+  "versionCode": 127,
+  "versionName": "1.2.7",
+  "updateTitle": "论文智作大师 v1.2.7 (外文Word Count精准计算与防截断版)",
+  "updateLog": "1. 【彻底修复外文长文截断】：英文、德文、法文等外语严格采用单词词元（Word Count）统计与截断保护，彻底解决按中文字符截断导致的内容大面积残缺；\n2. 【多级外文大纲解析强化】：支持 Chapter 1、1. Introduction 等多样化外文大纲分章，杜绝大纲识别失败退化为单章；\n3. 【禁止大模型对话反问与闲聊】：强化学术提示词，严禁输出“是否从第一阶段开始写”等规划废话，直出深度正文；\n4. 【全端统一升级发布】：Android 官方双签名包与 Windows 绿色免安装版同步更新至 v1.2.7。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.7/PaperMaster_v1.2.7.apk",
+  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.7/PaperMaster-Windows-v1.2.7.zip",
   "forceUpdate": false
 }
