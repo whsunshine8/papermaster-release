@@ -13,12 +13,12 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Android-brightgreen)](https://github.com/whsunshine8/papermaster-release)
 [![License](https://img.shields.io/badge/License-MIT-orange)](#)
 
-### 📥 软件下载 (v1.2.5 双端统一发布)
+### 📥 软件下载 (v1.2.6 双端统一发布)
 
 | 平台 / 版本 | 文件类型 | 架构 / 系统要求 | 官方下载直链 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.2.5 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.5/PaperMaster-Windows-v1.2.5.zip) | 单文件绿色免安装，解压即用 |
-| **Android v1.2.5 (移动版)** | 手机安装包 (`.apk`) | Android 8.0 及以上 | [⬇️ 下载 Android 安装包 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.5/PaperMaster_v1.2.5.apk) | 支持前台服务长保活、夜间模式与历史持久化 |
+| **Windows v1.2.6 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.6/PaperMaster-Windows-v1.2.6.zip) | 单文件绿色免安装，解压即用 |
+| **Android v1.2.6 (移动版)** | 手机安装包 (`.apk`) | Android 8.0 及以上 | [⬇️ 下载 Android 安装包 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.6/PaperMaster_v1.2.6.apk) | 支持前台服务长保活、夜间模式与历史持久化 |
 
 > 🌐 **在线体验站**：你可以访问 [https://papermaster.whsunshine.link/](https://papermaster.whsunshine.link/) 免费在线体验学术大纲规划。  
 > 💡 **版本归档**：可随时访问 [Releases 官方发布页](https://github.com/whsunshine8/papermaster-release/releases) 查看详细更新日志。
@@ -76,6 +76,12 @@
 
 ### 📝 最近更新日志
 
+#### v1.2.6 (2026-10-07) - 外文学术论文生成深度优化与全流程适配版
+- **【深度修复外文生成提示词与格式错乱】**：解决选择非中文（英语、日语、德语、法语等）时，摘要与参考文献依然调用中文审稿人提示词导致生成不地道、中英文混杂的问题；
+- **【外文学术提示词精准重构】**：针对外文论文全面采用英文国际审稿专家 System Prompt，摘要严格遵循国际通用 Abstract & Keywords 规范；
+- **【动态参考文献标题与国际查验表】**：参考文献标题随所选语种动态匹配（英文 `References`、德文 `Literaturverzeichnis`、法文 `Références` 等），并自动输出包含 DOI/检索链接的标准验证表格；
+- **【双端统一发布】**：Android 端（完整官方 V1+V2 双签名 APK）与 Windows 原生桌面单文件版同步升级至 **v1.2.6**。
+
 #### v1.2.5 (2026-10-07) - 移除图片生成及检测·极速学术长文版
 - **【移除图片生成与 GPT-IMAGE 功能】**：彻底移除流水线中对 `gpt-image-2.5-flare` 的启动前自检测试与正文插图生成逻辑，专注于纯学术万字长文文本与标准图注说明，生成速度大幅提升，避免无谓接口等待与超时；
 - **【双端统一发布】**：Android 端（完整官方 V1+V2 签名 APK）与 Windows 原生桌面单文件版同步升级至 **v1.2.5**。
@@ -117,17 +123,19 @@
 > An automated AI-powered academic thesis and research report creation assistant.  
 > Supporting both **Windows Desktop** and **Android Mobile** platforms unified at **v1.2.4**. Features multi-language academic paper generation (Simplified Chinese, Traditional Chinese [TW/HK], English, Japanese, German, etc.), deep outline reasoning, coherent long-form multi-chapter generation, proposal/review/defense pipeline, anti-AIGC detection algorithms (CQVIP, Gocheck, PaperPass, CNKI), and standard Word (.docx) export.
 
-### 📥 Download (v1.2.5)
+### 📥 Download (v1.2.6)
 
 | Platform / Version | File Type | System Requirements | Download Link | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.2.5 (Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.5/PaperMaster-Windows-v1.2.5.zip) | Standalone portable executable, no install required |
-| **Android v1.2.5 (Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.5/PaperMaster_v1.2.5.apk) | Foreground persistence, dark mode, dual V1+V2 signatures |
+| **Windows v1.2.6 (Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.6/PaperMaster-Windows-v1.2.6.zip) | Standalone portable executable, no install required |
+| **Android v1.2.6 (Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.6/PaperMaster_v1.2.6.apk) | Foreground persistence, dark mode, dual V1+V2 signatures |
 
 ---
 
-### 🌟 Key Updates in v1.2.5
-- **Pure Text Pipeline**: Removed `gpt-image-2.5-flare` dependency and pre-generation image checks, significantly reducing generation latency and ensuring 100% focus on pure academic long-form thesis text.
+### 🌟 Key Updates in v1.2.6
+- **Foreign Language Generation Pipeline Overhaul**: Fixed issues where non-Chinese theses received Chinese prompts and headings. Abstract and References prompts are now fully localized and dynamically adapt to English, Japanese, German, etc.
+- **Dynamic References Heading & International DOI Table**: References headings dynamically match the selected language (`References`, `Literaturverzeichnis`, `Références`), complete with DOI search tables.
+- **Pure Text Pipeline**: Removed `gpt-image-2.5-flare` dependency and pre-generation image checks, ensuring 100% focus on pure academic text.
 - **Multi-Language Support**: Seamlessly generate academic theses in Simplified Chinese (Default), Traditional Chinese (Taiwan / Hong Kong), English (Academic Standard), Japanese, German, French, Russian, Korean, and Spanish.
 - **Full Pipeline Alignment**: Outline reasoning, proposal, chapter-by-chapter body text, and defense speeches strictly follow the selected language style.
 - **Privacy & Pure Local Sandbox**: 100% offline data retention with zero cloud draft storage.
