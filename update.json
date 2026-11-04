@@ -1,9 +1,9 @@
 {
-  "versionCode": 131,
-  "versionName": "1.3.1",
-  "updateTitle": "论文智作大师 v1.3.1 (五大模型并发与自动容灾防中断版)",
-  "updateLog": "1. 【五大核心模型并发分发池】：\n   - 全面引入 gemini-3.8-flash、gpt-5.6、kimi-k3、deepseek-v4-flash、GLM-4-Flash-250414 五大模型协同矩阵；\n   - 采用多章节轮换并发分发机制，彻底消除单模型高并发排队与卡顿；\n2. 【全自动容灾重试，杜绝中断反复重试】：\n   - 任何章节若遇单模型网络波动或超时，系统零报错自动无缝顺延切换到下一个模型继续推进撰写，用户无需频繁点击继续；\n3. 【深度思考内容自动净化】：\n   - 自动剥离 DeepSeek / Kimi / Claude 等模型的 <think> 思维链标签，确保输出纯学术正文；\n4. 【全端统一升级发布】：Android 官方双签名包与 Windows 绿色免安装版同步更新至 v1.3.1。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.1/PaperMaster_v1.3.1.apk",
-  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.1/PaperMaster-Windows-v1.3.1.zip",
+  "versionCode": 132,
+  "versionName": "1.3.2",
+  "updateTitle": "论文智作大师 v1.3.2 (全章节真正并发与多模型狂飙版)",
+  "updateLog": "1. 【真正全章节五大模型并发撰写】：\n   - 彻底摒弃传统单章串行生成的做法，大纲解析出的所有章节同时并发分发给五大模型矩阵（gemini-3.8-flash, gpt-5.6, kimi-k3, deepseek-v4-flash, GLM-4-Flash-250414）；\n   - 所有章节在后台多个独立线程中同一时刻同时请求撰写，万字长文生成速度提升 5 倍以上；\n2. 【按序汇聚与零感知自动容灾】：\n   - 各章节全部完成后由系统严格依照大纲目录顺序进行拼装汇总，任何章节遇上游波动在后台自动切备用模型无缝重试，彻底杜绝中断和手动点击继续；\n3. 【全端统一升级发布】：Android 官方双签名包与 Windows 绿色免安装版同步更新至 v1.3.2。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.2/PaperMaster_v1.3.2.apk",
+  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.2/PaperMaster-Windows-v1.3.2.zip",
   "forceUpdate": false
 }
