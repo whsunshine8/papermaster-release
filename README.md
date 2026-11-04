@@ -17,8 +17,8 @@
 
 | 平台 / 版本 | 文件类型 | 架构 / 系统要求 | 官方下载直链 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.2.8 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.8/PaperMaster-Windows-v1.2.8.zip) | 单文件绿色免安装，解压即用 |
-| **Android v1.2.8 (移动版)** | 手机安装包 (`.apk`) | Android 8.0 及以上 | [⬇️ 下载 Android 安装包 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.8/PaperMaster_v1.2.8.apk) | 支持前台服务长保活、夜间模式与历史持久化 |
+| **Windows v1.2.9 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.9/PaperMaster-Windows-v1.2.9.zip) | 单文件绿色免安装，解压即用 |
+| **Android v1.2.9 (移动版)** | 手机安装包 (`.apk`) | Android 8.0 及以上 | [⬇️ 下载 Android 安装包 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.9/PaperMaster_v1.2.9.apk) | 支持前台服务长保活、夜间模式与历史持久化 |
 
 > 🌐 **在线体验站**：你可以访问 [https://papermaster.whsunshine.link/](https://papermaster.whsunshine.link/) 免费在线体验学术大纲规划。  
 > 💡 **版本归档**：可随时访问 [Releases 官方发布页](https://github.com/whsunshine8/papermaster-release/releases) 查看详细更新日志。
@@ -133,8 +133,8 @@
 
 | Platform / Version | File Type | System Requirements | Download Link | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.2.8 (Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.8/PaperMaster-Windows-v1.2.8.zip) | Standalone portable executable, no install required |
-| **Android v1.2.8 (Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.8/PaperMaster_v1.2.8.apk) | Foreground persistence, dark mode, dual V1+V2 signatures |
+| **Windows v1.2.9 (Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.9/PaperMaster-Windows-v1.2.9.zip) | Standalone portable executable, no install required |
+| **Android v1.2.9 (Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.9/PaperMaster_v1.2.9.apk) | Foreground persistence, dark mode, dual V1+V2 signatures |
 
 ---
 
