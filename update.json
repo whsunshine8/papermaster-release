@@ -1,9 +1,9 @@
 {
-  "versionCode": 128,
-  "versionName": "1.2.8",
-  "updateTitle": "论文智作大师 v1.2.8 (模型加速与直营店更新版)",
-  "updateLog": "1. 【默认模型全新升级】：默认切换为极速高性能模型 gemini-3.8-flash，支持秒级完成万字学术大纲与各章节正文撰写；\n2. 【大模型列表与映射兼容修复】：修复 gpt-5.6、gpt-5.6-sol 等前沿模型调用映射，解决长文生成因超时导致的偶发异常；\n3. 【官方闲鱼直营店与充值链接更新】：内置与外部购买直链全面统一为最新官方直营店直链，自动发卡更稳定；\n4. 【全端统一升级发布】：Android 官方双签名包与 Windows 绿色免安装版同步更新至 v1.2.8。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.8/PaperMaster_v1.2.8.apk",
-  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.8/PaperMaster-Windows-v1.2.8.zip",
+  "versionCode": 129,
+  "versionName": "1.2.9",
+  "updateTitle": "论文智作大师 v1.2.9 (AI智能推荐选题与表单优化版)",
+  "updateLog": "1. 【全新选题流程优化】：表单布局结构调整为：先选择学科门类 -> 论文层次 -> 所学专业 -> 论文题目；\n2. 【智能题目推荐与换一批】：新增“💡 推荐10个精选题目”功能，AI 结合学科专业层次一键给出10个好写且具创新度的题目，支持单选直接填入，不满意可一键“🔄 换一批”；\n3. 【双端功能完全对齐发布】：Android 官方双签名包与 Windows 绿色免安装版同步支持智能选题与题库刷新。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.9/PaperMaster_v1.2.9.apk",
+  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.2.9/PaperMaster-Windows-v1.2.9.zip",
   "forceUpdate": false
 }
