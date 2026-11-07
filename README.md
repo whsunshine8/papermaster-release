@@ -17,8 +17,8 @@
 
 | 平台 / 版本 | 文件类型 | 架构 / 系统要求 | 官方下载直链 | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.3.2 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.2/PaperMaster-Windows-v1.3.2.zip) | 单文件绿色免安装，解压即用 |
-| **Android v1.3.2 (移动版)** | 手机安装包 (`.apk`) | Android 8.0 及以上 | [⬇️ 下载 Android 安装包 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.2/PaperMaster_v1.3.2.apk) | 支持前台服务长保活、夜间模式与历史持久化 |
+| **Windows v1.3.7 (桌面版)** | 绿色版压缩包 (`.zip`) | Windows 10 / 11 64位 (x64) | [⬇️ 下载 Windows 绿色版 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.7/PaperMaster-Windows-v1.3.7.zip) | 单文件绿色免安装，解压即用 |
+| **Android v1.3.7 (移动版)** | 手机安装包 (`.apk`) | Android 8.0 及以上 | [⬇️ 下载 Android 安装包 (GitHub 直链)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.7/PaperMaster_v1.3.7.apk) | 支持前台服务长保活、夜间模式与历史持久化 |
 | **Apple iOS (免签主屏幕版)** | 苹果官方 Web-App | iOS 14.0 / iPadOS / macOS | [🍏 前往官方体验站添加至主屏幕](https://papermaster.cnkiedu.cn/#iosCard) | Safari一键添加到主屏幕，全屏原生App体验，永不掉签 |
 
 > 🌐 **在线体验站**：你可以访问 [https://papermaster.whsunshine.link/](https://papermaster.whsunshine.link/) 免费在线体验学术大纲规划。  
@@ -134,8 +134,8 @@
 
 | Platform / Version | File Type | System Requirements | Download Link | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **Windows v1.3.2 (Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.2/PaperMaster-Windows-v1.3.2.zip) | Standalone portable executable, no install required |
-| **Android v1.3.2 (Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.2/PaperMaster_v1.3.2.apk) | Foreground persistence, dark mode, dual V1+V2 signatures |
+| **Windows v1.3.7 (Desktop)** | Standalone Archive (`.zip`) | Windows 10/11 64-bit | [⬇️ Download Windows (.zip)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.7/PaperMaster-Windows-v1.3.7.zip) | Standalone portable executable, no install required |
+| **Android v1.3.7 (Mobile)** | Android Package (`.apk`) | Android 8.0+ | [⬇️ Download Android (.apk)](https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.7/PaperMaster_v1.3.7.apk) | Foreground persistence, dark mode, dual V1+V2 signatures |
 | **Apple iOS (Web-App)** | Apple Standalone Web-App | iOS 14.0+ / iPadOS / macOS | [🍏 Add to Home Screen via Safari](https://papermaster.cnkiedu.cn/#iosCard) | Zero install, full-screen standalone native experience, no revoke |
 
 ---
