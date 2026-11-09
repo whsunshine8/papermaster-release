@@ -1,9 +1,9 @@
 {
-  "versionCode": 137,
-  "versionName": "1.3.7",
-  "updateTitle": "论文智作大师 v1.3.7 (八模型并发与思维链清洗版)",
-  "updateLog": "1. 修复长文本请求 502：读超时 20 秒→180 秒，遇到 502/503/504/429 先用同一模型退避重试再切兜底模型，大纲/开题/正文不再一请求就失败；\n2. 八模型并发矩阵：章节并发池扩到 8 个（新增 claude-opus-4-8-thinking、deepseek-v4.1-flash-1017、grok-4.7），每章一个不同模型同时推进，失败自动顺延下一个模型；\n3. 思维链彻底清洗：<think> 思考块四层剥离（大写、带属性、<thinking> 变体、被截断未闭合、代码围栏），正文为空自动换模型重写；\n4. 双端统一发布：Android 官方签名包与 Windows 绿色免安装版同步更新至 v1.3.7。",
-  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.7/PaperMaster_v1.3.7.apk",
-  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.3.7/PaperMaster-Windows-v1.3.7.zip",
+  "versionCode": 158,
+  "versionName": "1.5.8",
+  "updateTitle": "论文智作大师 v1.5.8 (合并遗漏修复版)",
+  "updateLog": "1. 修复正文流水线核心文件被坏合并截断导致无法编译、重建自动退回旧包的问题；\n2. 修复参考文献/致谢阶段标签不匹配导致状态回填失效、合并后缺参考文献与致谢的问题；\n3. 修复续写时旧全文与逐章存档重复拼接导致的章节重复/错乱，改为按章节槽位重建；\n4. 章节空响应/请求失败先自动换模型重试一次，仍失败才落占位符并在结尾明确列出缺章清单；\n5. 修复 Windows 端深度去AI味将正文截断到 8000 字后整篇覆盖、导致后半部分章节全部丢失的问题，改为按段落分块逐段重构。\n6. 双端统一发布至 v1.5.8（Android versionCode=158）。",
+  "downloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.5.8/PaperMaster_v1.5.8.apk",
+  "windowsDownloadUrl": "https://github.com/whsunshine8/papermaster-release/releases/download/v1.5.8/PaperMaster-Windows-v1.5.8.zip",
   "forceUpdate": false
 }
